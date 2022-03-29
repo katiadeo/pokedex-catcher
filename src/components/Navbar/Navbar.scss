@@ -1,0 +1,106 @@
+.header {
+    width: 100%;
+    min-height: 100px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 8px 8px 8px black;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+
+    .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 50px;
+
+        a {
+            border-radius: 50px;
+            padding: 10px 25px;
+            border: 1px solid var(--secondary-color);
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 20px;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 50%, transparent 50%);
+            background-size: 200% 100%;
+            background-position: right bottom;
+            transition: 0.5s ease-out;
+       
+            &:hover {
+                border-radius: 0.9em;
+                box-shadow: inset -7px -15px 10px -20px #000000, inset 10px 17px 10px -20px #ffffff;
+                background-position: left bottom;
+                color: var(--bright-color);
+            }
+
+            &:active {
+                border-radius: 0.9em;
+                box-shadow: var(--shadows-btn-active);
+                color: rgba(255, 255, 255, 0.8);
+            }
+        }
+    }
+}
+
+
+.navbar-dark {
+
+    
+    .navbar-brand {
+        border-radius: 50px;
+        padding: 10px 25px;
+        border: 1px solid var(--secondary-color);
+        color: var(--bright-color) !important;
+        font-size: 22px;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 50%, transparent 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: 0.5s ease-out;
+   
+        &:hover {
+            border-radius: 0.9em;
+            box-shadow: inset -7px -15px 10px -20px #000000, inset 10px 17px 10px -20px #ffffff;
+            background-position: left bottom;
+            color: rgba(255, 255, 255, 0.8) !important;
+        }
+    }
+
+    .navbar-nav {
+        padding-top: 15px;
+        gap: 15px;
+
+        .nav-link {
+            border-radius: 50px;
+            padding: 10px 25px;
+            border: 1px solid var(--secondary-color);
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 50%, transparent 50%);
+            background-size: 200% 100%;
+            background-position: right bottom;
+            transition: 0.5s ease-out;
+    
+            &:hover,
+            &:focus {
+                border-radius: 0.9em;
+                box-shadow: inset -7px -15px 10px -20px #000000, inset 10px 17px 10px -20px #ffffff;
+                background-position: left bottom;
+                color: rgba(255, 255, 255, 0.8) !important;
+            }
+        }
+    }
+
+    .navbar-toggler {
+        border-radius: 50%;
+        padding: 0.7rem;
+        color: rgba(255, 255, 255, 0.1) !important;
+        box-shadow: var(--shadows);
+        border: none;
+
+        &:hover, &:focus {
+            background: rgba(255, 255, 255, 0.1);
+        }
+    }
+} 
+
+.container {
+    padding: 1rem;
+}

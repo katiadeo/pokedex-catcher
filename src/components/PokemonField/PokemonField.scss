@@ -1,0 +1,30 @@
+.pokemons__field {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px 40px;
+    border-radius: 20px;
+    border: 1px solid var(--primary-color);
+    width: 80%;
+    box-shadow: 20px 10px 25px black, -20px -10px 25px black;
+    padding: 20px;
+    margin-bottom: 30px;
+    // background-color: rgba(0, 0, 0, 0.6);
+
+    hr {
+        width: 100%;
+        margin: 0;
+    }
+
+    .loadMoreBtn {
+        margin-bottom: 30px;
+        background-color: transparent;
+        box-shadow: var(--shadows-btn);
+        color: var(--secondary-color);
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.44);
+            color: rgba(255, 255, 255, 0.57);
+        }
+    }
+}

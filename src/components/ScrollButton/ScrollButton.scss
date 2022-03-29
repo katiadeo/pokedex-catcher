@@ -1,0 +1,40 @@
+.icon {
+    position: fixed;
+    bottom: 0;
+    right: 25px;
+    z-index: 1;
+    color: var(--bright-color);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadows);
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 50%;
+    padding: 20px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+
+    transform: translateY(120%);
+    -webkit-transform: translateY(120%);
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+
+    &:hover {
+        background-color: black;
+    }
+
+    &:active {
+        transform: scale(0.9);
+        box-shadow: var(--shadows-btn-active);
+        color: var(--bright-color);
+    }
+}
+    
+@keyframes slide-in {
+    100% { transform: translateY(-30%); }
+}
+
+@-webkit-keyframes slide-in {
+    100% { -webkit-transform: translateY(-30%); }
+}

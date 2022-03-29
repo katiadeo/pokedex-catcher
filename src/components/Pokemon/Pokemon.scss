@@ -1,0 +1,68 @@
+.pokemon-card {
+    max-width: 100%;
+    width: 400px;
+    border-radius: 50px;
+    padding: 20px 35px;
+    text-align: center;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+    row-gap: 100px;
+    transition: all 0.2s ease-in-out;
+    background: right bottom / 60% no-repeat url('/assets/Pokeball_card.png');
+    box-shadow: 20px 10px 25px black, -20px -10px 25px black, inset 10px 10px 35px rgba(0, 0, 0, 0.5);
+
+    &:hover {
+        box-shadow: 2px 2px 5px black, -2px -2px 5px black;
+        background-color: rgba(27, 89, 137, 0.2);
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .name {
+            color: var(--btn-color);
+            border: 1px solid var(--secondary-color);
+            border-radius: 30px;
+            padding: 20px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            width: 130px;
+            font-size: 18px;
+            font-weight: lighter;
+            padding: 5px;
+        }
+    }
+
+    &__img {
+        max-width: 200px;
+        width: 100%;
+
+        &:hover {
+            cursor: pointer;
+            animation: toggle 1s ease-in-out;
+        } 
+    }
+
+    @keyframes toggle {
+        from {
+            transform: scale3d(1, 1, 1);
+        }
+
+        50% {
+            transform: scale3d(1.2, 1.2, 1.2);
+        }
+
+        to {
+            transform: scale3d(1, 1, 1);
+        }
+        
+    }
+}
