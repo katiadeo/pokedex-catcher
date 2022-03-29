@@ -20,7 +20,7 @@ const Pokemon = ({ name, id, captured }) => {
 
 		await axios({
 			method: 'PUT',
-			url: `http://localhost:8000/pokemons/${id}`,
+			url: `https://pokedex-catcher.herokuapp.com/api/pokemons/${id}`,
 			data: {
 				id: id,
 				name: name,

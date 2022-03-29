@@ -6,7 +6,7 @@ const CapturedPokemons = () => {
 	const [pokemons, setPokemons] = useState([]);
 
 	useEffect(() => {
-		fetch('http://localhost:8000/pokemons?captured=true')
+		fetch('https://pokedex-catcher.herokuapp.com/api/pokemons?captured=true')
 			.then((response) => response.json())
 			.then((data) => setPokemons(data));
 	}, []);

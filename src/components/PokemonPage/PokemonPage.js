@@ -8,13 +8,13 @@ const PokemonPage = ({ id }) => {
 	const [pokemons, setPokemons] = useState([]);
 
 	useEffect(() => {
-		fetch('http://localhost:8000/pokemons?captured=true')
+		fetch('https://pokedex-catcher.herokuapp.com/api/pokemons?captured=true')
 			.then((response) => response.json())
 			.then((data) => setPokemons(data));
 	}, []);
 
 	useEffect(() => {
-		fetch('http://localhost:8000/pokemons')
+		fetch('https://pokedex-catcher.herokuapp.com/api/pokemons')
 			.then((response) => response.json())
 			.then((data) => setPokemons(data));
 	}, []);

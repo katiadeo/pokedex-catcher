@@ -21,7 +21,7 @@ const PokemonField = () => {
 				setError(false);
 				const response = await axios({
 					method: 'GET',
-					url: 'http://localhost:8000/pokemons/',
+					url: 'https://pokedex-catcher.herokuapp.com/api/pokemons/',
 					params: { _page: page, _limit: 5 },
 					cancelToken: new CancelToken(function executor(c) {
 						cancel = c;
